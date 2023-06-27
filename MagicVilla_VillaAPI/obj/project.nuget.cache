@@ -1,12 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "6UEpuMb40tStgFwCpgElKyeiDrsjyUPzFcbVyZNG/G3Bb4O8hCzccdKknPs5HuQyoS99o2qapbu044Szu1YgJQ==",
+  "dgSpecHash": "r4OH04OmsuOW5d3SrXmlxkOejYihfx5jC1Db4BgJlXKebfvfM6wXeKdN66ooHDqxZ5KAYAqTpTyKUT7NjKWcDw==",
   "success": true,
   "projectFilePath": "/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj",
   "expectedPackageFiles": [
+    "/Users/osama/.nuget/packages/microsoft.aspnetcore.jsonpatch/7.0.8/microsoft.aspnetcore.jsonpatch.7.0.8.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/7.0.8/microsoft.aspnetcore.mvc.newtonsoftjson.7.0.8.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.aspnetcore.openapi/7.0.7/microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/osama/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/osama/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/osama/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

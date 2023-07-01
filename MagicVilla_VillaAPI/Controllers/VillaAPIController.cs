@@ -1,6 +1,5 @@
 ﻿using System;
 using MagicVilla_VillaAPI.Data;
-using MagicVilla_VillaAPI.Logging;
 using MagicVilla_VillaAPI.models;
 using MagicVilla_VillaAPI.models.Dto;
 using Microsoft.AspNetCore.JsonPatch;
@@ -13,22 +12,9 @@ namespace MagicVilla_VillaAPI.Controllers
     //[ApiController]
     public class VillaAPIController : ControllerBase
 	{
-        // type1
-        //private readonly ILogger<VillaAPIController> _logger;
-        //public VillaAPIController(ILogger<VillaAPIController> logger)
-        //{
-        //    _logger = logger;
-        //}
-        //public VillaAPIController(ILogger<VillaAPIController> logger)
-        //{
-        //    _logger = logger;
-        //}
 
-        // type2
-        private readonly ILogging _logger;
-        public VillaAPIController(ILogging logger)
+        public VillaAPIController()
         {
-            _logger = logger;
         }
 
 
@@ -37,12 +23,6 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
 		{
-            // when some one use GetVillas this line
-            // will be printed in file in 'log' folder
-            // type1
-            //_logger.LogInformation("Getting all villas");
-            // type2
-            _logger.Log("Getting all villas","");//"" its the type
             return Ok(VillaStore.villaList);
         }
 
@@ -54,10 +34,6 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             if(id==0)
             {
-                // type1
-                //_logger.LogError("get villa error with id"+id);
-                // type2
-                _logger.Log("get villa error with id" + id , "error");
                 return BadRequest();
             }
             var villa = VillaStore.villaList.FirstOrDefault(u => u.Id == id);

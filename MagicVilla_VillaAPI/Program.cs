@@ -1,11 +1,15 @@
-﻿using MagicVilla_VillaAPI.Logging;
+﻿using MagicVilla_VillaAPI.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+});
 // these lines make folder 'log' in it file name 'villaLogs' and print in it what we have in controller file , like this line: _logger.LogInformation("Getting all villas");
 //Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().
 //    WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();

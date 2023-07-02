@@ -1,9 +1,13 @@
 ﻿<Properties StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Controllers/VillaAPIController.cs">
     <Files>
-      <File FileName="MagicVilla_VillaAPI/Controllers/VillaAPIController.cs" Line="13" Column="44" />
+      <File FileName="MagicVilla_VillaAPI/Controllers/VillaAPIController.cs" Line="15" Column="1" />
       <File FileName="MagicVilla_VillaAPI/models/Dto/VillaDTO.cs" Line="13" Column="19" />
-      <File FileName="MagicVilla_VillaAPI/models/Villa.cs" />
+      <File FileName="MagicVilla_VillaAPI/models/Villa.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,8 +29,4 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

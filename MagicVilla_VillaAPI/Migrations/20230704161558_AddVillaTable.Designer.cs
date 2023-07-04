@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230703081633_AddVillaTable")]
+    [Migration("20230704161558_AddVillaTable")]
     partial class AddVillaTable
     {
         /// <inheritdoc />

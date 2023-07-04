@@ -1,25 +1,28 @@
 ﻿<Properties StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/appsettings.json">
     <Files>
-      <File FileName="MagicVilla_VillaAPI/Program.cs" />
-      <File FileName="MagicVilla_VillaAPI/appsettings.json" Line="13" Column="1" />
-      <File FileName="MagicVilla_VillaAPI/Data/ApplicationDbContext.cs" />
+      <File FileName="MagicVilla_VillaAPI/Controllers/VillaAPIController.cs" Line="1" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/appsettings.json" Line="13" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MagicVilla" expanded="True">
-            <Node name="MagicVilla_VillaAPI" expanded="True" />
+            <Node name="MagicVilla_VillaAPI">
+              <Node name="Controllers" expanded="True" />
+              <Node name="models" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

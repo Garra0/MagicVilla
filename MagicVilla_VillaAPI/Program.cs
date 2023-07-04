@@ -10,10 +10,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
-// these lines make folder 'log' in it file name 'villaLogs' and print in it what we have in controller file , like this line: _logger.LogInformation("Getting all villas");
-//Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().
-//    WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
-//builder.Host.UseSerilog();
 
 builder.Services.AddControllers(option =>
 {

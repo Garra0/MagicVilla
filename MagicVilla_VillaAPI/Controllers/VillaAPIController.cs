@@ -15,8 +15,7 @@ namespace MagicVilla_VillaAPI.Controllers
     public class VillaAPIController : ControllerBase
     {
 
-        // connection the DB to the controller
-
+        // connection the DB to the controller and make mapper
         private readonly ApplicationDbContext _db;
         private readonly IMapper _mapper; 
         public VillaAPIController(ApplicationDbContext db, IMapper mapper)
@@ -74,22 +73,10 @@ namespace MagicVilla_VillaAPI.Controllers
             {
                 return BadRequest(CreateDTO);
             }
-            // the next 2 code are equles
-            //1-
+            
             // villa is the destination and createDto source
             Villa model = _mapper.Map<Villa>(CreateDTO);
 
-            //2-
-            //Villa model = new()
-            //{
-            //    Amenity = CreateDTO.Amenity,
-            //    Details = CreateDTO.Details,
-            //    ImageUrl = CreateDTO.ImageUrl,
-            //    Name = CreateDTO.Name,
-            //    Occupancy = CreateDTO.Occupancy,
-            //    Rate = CreateDTO.Rate,
-            //    Sqft = CreateDTO.Sqft
-            //};
             await _db.Villas.AddAsync(model);
             await _db.SaveChangesAsync();
 
@@ -130,17 +117,6 @@ namespace MagicVilla_VillaAPI.Controllers
 
             Villa model = _mapper.Map<Villa>(UpdateDTO);
             
-            //Villa model = new()
-            //{
-            //    Amenity = UpdateDTO.Amenity,
-            //    Details = UpdateDTO.Details,
-            //    Id = UpdateDTO.Id,
-            //    ImageUrl = UpdateDTO.ImageUrl,
-            //    Name = UpdateDTO.Name,
-            //    Occupancy = UpdateDTO.Occupancy,
-            //    Rate = UpdateDTO.Rate,
-            //    Sqft = UpdateDTO.Sqft
-            //};
             _db.Villas.Update(model);
             await _db.SaveChangesAsync();
 
@@ -151,23 +127,11 @@ namespace MagicVilla_VillaAPI.Controllers
         [HttpPatch("{id:int}", Name = "UpdatePartialVilla")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdatePartialVilla(int id, JsonPatchDocument<VillaUpdateDTO> patchDTO)
+        public async Task<IActionResult> UpdatePartialVilla(int id ,JsonPatchDocument<VillaUpdateDTO> patchDTO)
         {
             var villa = await _db.Villas.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
 
             VillaUpdateDTO villaDTO = _mapper.Map<VillaUpdateDTO>(villa);
-
-            //VillaUpdateDTO villaDTO = new()
-            //{
-            //    Amenity = villa.Amenity,
-            //    Details = villa.Details,
-            //    Id = villa.Id,
-            //    ImageUrl = villa.ImageUrl,
-            //    Name = villa.Name,
-            //    Occupancy = villa.Occupancy,
-            //    Rate = villa.Rate,
-            //    Sqft = villa.Sqft
-            //};
 
             if (patchDTO == null || 0 == id || villa == null)
             {
@@ -178,17 +142,6 @@ namespace MagicVilla_VillaAPI.Controllers
 
             Villa model = _mapper.Map<Villa>(villaDTO);
 
-            //Villa model = new Villa()
-            //{
-            //    Amenity = villa.Amenity,
-            //    Details = villa.Details,
-            //    Id = villa.Id,
-            //    ImageUrl = villa.ImageUrl,
-            //    Name = villa.Name,
-            //    Occupancy = villa.Occupancy,
-            //    Rate = villa.Rate,
-            //    Sqft = villa.Sqft
-            //};
             _db.Villas.Update(model);
             await _db.SaveChangesAsync();
 

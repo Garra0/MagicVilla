@@ -29,9 +29,13 @@
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="Data\" />
+    <None Remove="Repository\" />
+    <None Remove="Repository\IRepository\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Repository\IRepository\" />
   </ItemGroup>
 </Project>

@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MagicVilla_VillaAPI.Data
 {
+    // i made the table from these atts and info
+    // and i used the DB from here to add or delete villas from the list
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)

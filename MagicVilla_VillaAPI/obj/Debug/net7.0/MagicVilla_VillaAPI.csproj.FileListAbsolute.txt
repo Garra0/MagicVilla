@@ -176,3 +176,5 @@
 /Users/osama/Desktop/Projects/MagicVilla.csproj/MagicVilla_VillaAPI/obj/Debug/net7.0/MagicVilla_VillaAPI.pdb
 /Users/osama/Desktop/Projects/MagicVilla.csproj/MagicVilla_VillaAPI/obj/Debug/net7.0/MagicVilla_VillaAPI.genruntimeconfig.cache
 /Users/osama/Desktop/Projects/MagicVilla.csproj/MagicVilla_VillaAPI/obj/Debug/net7.0/ref/MagicVilla_VillaAPI.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/AutoMapper.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

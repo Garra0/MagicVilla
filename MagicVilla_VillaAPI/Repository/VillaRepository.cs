@@ -9,62 +9,27 @@ using Microsoft.EntityFrameworkCore;
 namespace MagicVilla_VillaAPI.Repository
 {
     // class to implementation the IVillaRepository interface
-    public class VillaRepository : IVillaRepository
+    public class VillaRepository : Repository<Villa> ,IVillaRepository
     {
         private readonly ApplicationDbContext _db;
-        public VillaRepository(ApplicationDbContext db)
+        public VillaRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
-        // we implementation the seem functions from the Interface repository:
-
-        public async Task CreateAsync(Villa entity)
+        public async Task<Villa> UpdateAsync(Villa entity)
         {
-            await _db.Villas.AddAsync(entity);
-            await saveAsync();
-        }
-
-        public async Task<Villa> GetAsync(Expression<Func<Villa,bool>> filter = null, bool tracked = true)
-        {
-            IQueryable<Villa> query = _db.Villas;
-            if(!tracked)
-            {
-                query = query.AsNoTracking();
-            }
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-            return await query.FirstOrDefaultAsync();
-        }
-
-        public async Task<List<Villa>> GetAllAsync(Expression<Func<Villa,bool>> filter = null)
-        {
-            IQueryable<Villa> query = _db.Villas;
-
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-            return await query.ToListAsync();
-        }
-
-        public async Task RemoveAsync(Villa entity)
-        {
-            _db.Villas.Remove(entity);
-            await saveAsync();
-        }
-
-        public async Task saveAsync()
-        {
-            await _db.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(Villa entity)
-        {
+            entity.UpdatedDate = DateTime.Now;
             _db.Villas.Update(entity);
-            await saveAsync();
+            await _db.SaveChangesAsync();
+            return entity;
+            //  breakdown
+            //  return an instance of Villa type
+            //  'Task' is a type that represents an asynchronous operation.
+            //  It is used to indicate that a method returns a result asynchronously.
+            //  The Task type allows you to work with asynchronous code
+            //  and perform operations without blocking the execution thread.
+            //  async : i think its dont allow to block the I/O (thred) 
         }
     }
 }

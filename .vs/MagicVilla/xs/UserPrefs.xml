@@ -1,24 +1,26 @@
 ﻿<Properties StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Controllers/VillaAPIController.cs">
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/models/Dto/VillaDTO.cs">
     <Files>
-      <File FileName="MagicVilla_VillaAPI/Repository/VillaRepository.cs" Line="67" Column="31" />
-      <File FileName="MagicVilla_VillaAPI/Controllers/VillaAPIController.cs" Line="148" Column="47" />
-      <File FileName="MagicVilla_VillaAPI/Repository/IRepository/IVillaRepository.cs" Line="8" Column="3" />
+      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaDTO.cs" Line="11" Column="17" />
+      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaDTO (copy).cs" Line="15" Column="9" />
+      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaNumberCreateDTO.cs" Line="6" Column="35" />
+      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaNumberUpdateDTO.cs" Line="10" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MagicVilla">
-            <Node name="MagicVilla_VillaAPI" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="VillaAPIController.cs" selected="True" />
+            <Node name="MagicVilla_VillaAPI">
+              <Node name="Controllers" expanded="True" />
+              <Node name="models">
+                <Node name="Dto" expanded="True">
+                  <Node name="VillaDTO.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -26,4 +28,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

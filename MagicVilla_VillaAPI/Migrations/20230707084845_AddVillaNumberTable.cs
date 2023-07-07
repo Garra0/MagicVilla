@@ -70,35 +70,35 @@ namespace MagicVilla_VillaAPI.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreatedDate",
-                value: new DateTime(2023, 7, 7, 8, 12, 50, 65, DateTimeKind.Local).AddTicks(6450));
+                value: new DateTime(2023, 7, 7, 11, 48, 45, 747, DateTimeKind.Local).AddTicks(3810));
 
             migrationBuilder.UpdateData(
                 table: "Villas",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "CreatedDate",
-                value: new DateTime(2023, 7, 7, 8, 12, 50, 65, DateTimeKind.Local).AddTicks(6520));
+                value: new DateTime(2023, 7, 7, 11, 48, 45, 747, DateTimeKind.Local).AddTicks(3840));
 
             migrationBuilder.UpdateData(
                 table: "Villas",
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "CreatedDate",
-                value: new DateTime(2023, 7, 7, 8, 12, 50, 65, DateTimeKind.Local).AddTicks(6520));
+                value: new DateTime(2023, 7, 7, 11, 48, 45, 747, DateTimeKind.Local).AddTicks(3840));
 
             migrationBuilder.UpdateData(
                 table: "Villas",
                 keyColumn: "Id",
                 keyValue: 4,
                 column: "CreatedDate",
-                value: new DateTime(2023, 7, 7, 8, 12, 50, 65, DateTimeKind.Local).AddTicks(6520));
+                value: new DateTime(2023, 7, 7, 11, 48, 45, 747, DateTimeKind.Local).AddTicks(3840));
 
             migrationBuilder.UpdateData(
                 table: "Villas",
                 keyColumn: "Id",
                 keyValue: 5,
                 column: "CreatedDate",
-                value: new DateTime(2023, 7, 7, 8, 12, 50, 65, DateTimeKind.Local).AddTicks(6520));
+                value: new DateTime(2023, 7, 7, 11, 48, 45, 747, DateTimeKind.Local).AddTicks(3850));
         }
 
         /// <inheritdoc />

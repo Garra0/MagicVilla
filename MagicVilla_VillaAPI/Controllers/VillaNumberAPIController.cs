@@ -132,10 +132,10 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             try
             {
-                if (villNo == 0)
-                {
-                    return BadRequest();
-                }
+                //if (villNo == 0)
+                //{
+                //    return BadRequest();
+                //}
                 var villaNumber = await _dbVillaNumber.GetAsync(u => u.VillaNo == villNo);
                 if (villaNumber != null)
                 {

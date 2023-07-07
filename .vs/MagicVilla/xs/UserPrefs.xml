@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/models/Dto/VillaDTO.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/models/VillaNumber.cs">
     <Files>
-      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaDTO.cs" Line="11" Column="17" />
-      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaDTO (copy).cs" Line="15" Column="9" />
-      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaNumberCreateDTO.cs" Line="6" Column="35" />
-      <File FileName="MagicVilla_VillaAPI/models/Dto/VillaNumberUpdateDTO.cs" Line="10" Column="51" />
+      <File FileName="MagicVilla_VillaAPI/models/Villa.cs" Line="1" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/models/VillaNumber.cs" Line="19" Column="24" />
+      <File FileName="MagicVilla_VillaAPI/Controllers/VillaNumberAPIController.cs" Line="138" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,10 +16,9 @@
           <Node name="MagicVilla">
             <Node name="MagicVilla_VillaAPI">
               <Node name="Controllers" expanded="True" />
-              <Node name="models">
-                <Node name="Dto" expanded="True">
-                  <Node name="VillaDTO.cs" selected="True" />
-                </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="models" expanded="True">
+                <Node name="VillaNumber.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -28,6 +26,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

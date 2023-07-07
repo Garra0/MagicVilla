@@ -1,31 +1,17 @@
-﻿<Properties StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+﻿<Properties StartupConfiguration="{C33B4FB6-8F42-4A34-BF94-03A9A7C43752}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/models/VillaNumber.cs">
-    <Files>
-      <File FileName="MagicVilla_VillaAPI/models/Villa.cs" Line="1" Column="1" />
-      <File FileName="MagicVilla_VillaAPI/models/VillaNumber.cs" Line="19" Column="24" />
-      <File FileName="MagicVilla_VillaAPI/Controllers/VillaNumberAPIController.cs" Line="138" Column="20" />
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MagicVilla">
-            <Node name="MagicVilla_VillaAPI">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="models" expanded="True">
-                <Node name="VillaNumber.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="MagicVilla" expanded="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>

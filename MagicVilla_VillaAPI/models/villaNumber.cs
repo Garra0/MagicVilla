@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MagicVilla_VillaAPI.models
 {
-	public class villaNumber
+	public class VillaNumber
 	{
         [Key,DatabaseGenerated(DatabaseGeneratedOption.None)]
 		public int VillaNo { get; set; }

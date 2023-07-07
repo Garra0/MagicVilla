@@ -5,10 +5,10 @@ using MagicVilla_VillaAPI.models.Dto;
 
 namespace MagicVilla_VillaAPI
 {
-	public class MappingConfig : Profile
-	{
-		public MappingConfig()
-		{
+    public class MappingConfig : Profile
+    {
+        public MappingConfig()
+        {
             //The MappingConfig class is responsible for configuring
             //the mappings between different types of objects using
             //AutoMapper. AutoMapper is a library that simplifies the
@@ -20,11 +20,17 @@ namespace MagicVilla_VillaAPI
             //CreateMap<Villa, VillaDTO>().ReverseMap();
             //2-
             CreateMap<Villa, VillaDTO>();
-			CreateMap<VillaDTO, Villa>();
+            CreateMap<VillaDTO, Villa>();
 
             CreateMap<Villa, VillaCreateDTO>().ReverseMap();
             CreateMap<Villa, VillaUpdateDTO>().ReverseMap();
+
+
+            // Villa Number
+            CreateMap<VillaNumber, VillaNumberDTO>().ReverseMap();
+            CreateMap<VillaNumber, VillaNumberCreateDTO>().ReverseMap();
+            CreateMap<VillaNumber, VillaNumberUpdateDTO>().ReverseMap();
         }
-	}
+    }
 }
 

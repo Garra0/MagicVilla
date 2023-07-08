@@ -1,26 +1,13 @@
-﻿<Properties StartupConfiguration="{F72DFA3B-4D51-46CA-A852-1600673EA3FD}|Default">
+﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_Web/Services/VillaService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_Web/Program.cs">
     <Files>
-      <File FileName="MagicVilla_Web/Program.cs" Line="18" Column="26" />
-      <File FileName="MagicVilla_Web/MappingConfig.cs" Line="3" Column="1" />
-      <File FileName="MagicVilla_Web/Models/APIRequest.cs" Line="2" Column="14" />
-      <File FileName="MagicVilla_Web/Services/BaseService.cs" Line="2" Column="1" />
-      <File FileName="MagicVilla_Web/Services/VillaService.cs" Line="2" Column="7" />
+      <File FileName="MagicVilla_Web/Program.cs" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MagicVilla" expanded="True" selected="True">
-            <Node name="MagicVilla_Web">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Shared" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="MagicVilla" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

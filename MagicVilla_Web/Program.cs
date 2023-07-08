@@ -8,11 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
-var app = builder.Build();
 
 builder.Services.AddHttpClient<IVillaService, VillaService>();
 // AddScoped mean when we want create an obj from any class we will call the same obj
 builder.Services.AddScoped<IVillaService, VillaService>();
+
+// this line should be after 'builder.Services' lines ! , 90m to convert this problem ! XD
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

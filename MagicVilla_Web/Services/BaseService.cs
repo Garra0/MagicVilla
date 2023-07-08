@@ -26,11 +26,12 @@ namespace MagicVilla_Web.Services
         {
             try
             {
-                var client = httpClient.CreateClient("MagicVilla");
+                // we will call our client 'MagicAPI'
+                var client = httpClient.CreateClient("MagicAPI");
                 // we use for the Request message:
                 // 1-Headers 2-RequestUri 3-Content(just in POST/PUT) 4-Method
                 HttpRequestMessage message = new HttpRequestMessage();
-                message.Headers.Add("Accept", "aaplication/json");
+                message.Headers.Add("Accept", "application/json");
                 //Console.WriteLine(message.Headers);
                 message.RequestUri = new Uri(apiRequest.Url);
                 if (apiRequest.Data != null)
@@ -63,7 +64,9 @@ namespace MagicVilla_Web.Services
 
                 // Response Message
                 HttpResponseMessage apiResponse = null;
-                
+
+                apiResponse = await client.SendAsync(message);
+
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();
                 // DeserializeObject -> (i think its make .net string by json)
                 var APIResponse = JsonConvert.DeserializeObject<T>(apiContent);

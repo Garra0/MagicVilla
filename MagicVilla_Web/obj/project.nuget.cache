@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "11cs0Yl6dQ5/KKYIJ/RvYyIUUU+1pAH7D1/SE8i84smhDA3OmlVEadiEdv0alsc8B61rPBaRhiRHn0w+eN27Xw==",
+  "dgSpecHash": "bajhnSnwD1texjkEwc4nexQ4r5eXzVn74W2HmSxhi+ERy253YLB6F4Sth5/q3w4HASx288fueGMNpS58CQT6rw==",
   "success": true,
   "projectFilePath": "/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/MagicVilla_Web.csproj",
   "expectedPackageFiles": [
     "/Users/osama/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/osama/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.aspnetcore.jsonpatch/7.0.8/microsoft.aspnetcore.jsonpatch.7.0.8.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/osama/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/osama/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

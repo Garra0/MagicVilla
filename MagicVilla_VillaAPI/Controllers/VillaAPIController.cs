@@ -12,6 +12,9 @@ using Microsoft.EntityFrameworkCore;
 namespace MagicVilla_VillaAPI.Controllers
 {
     //important:
+    // Route to use it in Urls , this project url is https://localhost:7001
+    // if i add to url class route we will access the class
+    // EX: https://localhost:7001/api/VillaAPI
     [Route("api/VillaAPI")] // or use [Route("api/[controller]")]
     //[ApiController]
     public class VillaAPIController : ControllerBase

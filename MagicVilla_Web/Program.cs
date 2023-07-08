@@ -1,4 +1,6 @@
-﻿using MagicVilla_Wep;
+﻿using MagicVilla_Web.Services;
+using MagicVilla_Web.Services.IServices;
+using MagicVilla_Wep;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 var app = builder.Build();
+
+builder.Services.AddHttpClient<IVillaService, VillaService>();
+// AddScoped mean when we want create an obj from any class we will call the same obj
+builder.Services.AddScoped<IVillaService, VillaService>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

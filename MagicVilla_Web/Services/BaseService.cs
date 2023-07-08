@@ -27,12 +27,17 @@ namespace MagicVilla_Web.Services
             try
             {
                 var client = httpClient.CreateClient("MagicVilla");
+                // we use for the Request message:
+                // 1-Headers 2-RequestUri 3-Content 4-Method
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "aaplication/json");
-                Console.WriteLine(message.Headers);
+                //Console.WriteLine(message.Headers);
                 message.RequestUri = new Uri(apiRequest.Url);
                 if (apiRequest.Data != null)
                 {
+                    // JsonConvert -> convert between .net & jsvon types
+                    // SerializeObject -> represenation json string ( i think its make json string)
+                    // StringContent(Data, Encoding, type)
                     message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data),
                         Encoding.UTF8, "application/json");
                 }
@@ -56,10 +61,11 @@ namespace MagicVilla_Web.Services
                         break;
                 }
 
+                // Response Message
                 HttpResponseMessage apiResponse = null;
-                apiResponse = await client.SendAsync(message);
-
+                
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();
+                // DeserializeObject -> (i think its make .net string by json)
                 var APIResponse = JsonConvert.DeserializeObject<T>(apiContent);
                 return APIResponse;
             }

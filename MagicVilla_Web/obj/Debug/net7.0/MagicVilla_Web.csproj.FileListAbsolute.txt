@@ -29,3 +29,13 @@
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/obj/Debug/net7.0/MagicVilla_Web.pdb
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/obj/Debug/net7.0/MagicVilla_Web.genruntimeconfig.cache
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/obj/Debug/net7.0/ref/MagicVilla_Web.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.deps.json
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.runtimeconfig.json
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/AutoMapper.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.pdb
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/obj/Debug/net7.0/MagicVilla_Web.csproj.CopyComplete

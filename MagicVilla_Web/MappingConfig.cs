@@ -1,7 +1,4 @@
-﻿using System;
-using AutoMapper;
-using MagicVilla_VillaAPI.models;
-using MagicVilla_VillaAPI.models.Dto;
+﻿using AutoMapper;
 using MagicVilla_Web.models.Dto;
 
 namespace MagicVilla_Wep

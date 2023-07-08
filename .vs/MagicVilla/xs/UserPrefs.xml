@@ -1,17 +1,23 @@
 ﻿<Properties StartupConfiguration="{F72DFA3B-4D51-46CA-A852-1600673EA3FD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_Web/Services/BaseService.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_Web/Services/VillaService.cs">
     <Files>
-      <File FileName="MagicVilla_Web/Services/BaseService.cs" Line="68" Column="31" />
-      <File FileName="MagicVilla_Web/Services/IServices/IBaseService.cs" Line="1" Column="1" />
+      <File FileName="MagicVilla_Web/Program.cs" Line="18" Column="26" />
+      <File FileName="MagicVilla_Web/MappingConfig.cs" Line="3" Column="1" />
+      <File FileName="MagicVilla_Web/Models/APIRequest.cs" Line="2" Column="14" />
+      <File FileName="MagicVilla_Web/Services/BaseService.cs" Line="2" Column="1" />
+      <File FileName="MagicVilla_Web/Services/VillaService.cs" Line="2" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MagicVilla">
+          <Node name="MagicVilla" expanded="True" selected="True">
             <Node name="MagicVilla_Web">
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="BaseService.cs" selected="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -19,12 +25,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -33,6 +33,14 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/Controllers/VillaController.cs" relfile="MagicVilla_Web/Controllers/VillaController.cs" line="21" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

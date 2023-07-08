@@ -28,7 +28,7 @@ namespace MagicVilla_Web.Services
             {
                 var client = httpClient.CreateClient("MagicVilla");
                 // we use for the Request message:
-                // 1-Headers 2-RequestUri 3-Content 4-Method
+                // 1-Headers 2-RequestUri 3-Content(just in POST/PUT) 4-Method
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "aaplication/json");
                 //Console.WriteLine(message.Headers);

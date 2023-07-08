@@ -24,14 +24,19 @@ Global
 		{C33B4FB6-8F42-4A34-BF94-03A9A7C43752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C33B4FB6-8F42-4A34-BF94-03A9A7C43752}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F72DFA3B-4D51-46CA-A852-1600673EA3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F72DFA3B-4D51-46CA-A852-1600673EA3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F72DFA3B-4D51-46CA-A852-1600673EA3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F72DFA3B-4D51-46CA-A852-1600673EA3FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72DFA3B-4D51-46CA-A852-1600673EA3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6B2CD9A-D7AB-4E76-8908-F31F4EB99744}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 	EndGlobalSection
 EndGlobal

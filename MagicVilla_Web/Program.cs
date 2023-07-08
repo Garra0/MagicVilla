@@ -1,6 +1,7 @@
 ﻿using MagicVilla_Web.Services;
 using MagicVilla_Web.Services.IServices;
 using MagicVilla_Wep;
+using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
 

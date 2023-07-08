@@ -3,6 +3,7 @@ namespace MagicVilla_Utility
 {
     public class SD
     {
+        // enum مجموعة من المتغيرات الثابتة 
         public enum ApiType
         {
             GET,

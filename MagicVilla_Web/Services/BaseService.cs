@@ -20,6 +20,8 @@ namespace MagicVilla_Web.Services
             this.httpClient = httpClient;
         }
 
+        // this fun get Request to access the DB
+        // then its return a Response
         public async Task<T> SendAsync<T>(APIRequest apiRequest)
         {
             try
@@ -27,6 +29,7 @@ namespace MagicVilla_Web.Services
                 var client = httpClient.CreateClient("MagicVilla");
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "aaplication/json");
+                Console.WriteLine(message.Headers);
                 message.RequestUri = new Uri(apiRequest.Url);
                 if (apiRequest.Data != null)
                 {

@@ -21,9 +21,11 @@
   <ItemGroup>
     <None Remove="Services\" />
     <None Remove="Services\IServices\" />
+    <None Remove="Views\Villa\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Services\IServices\" />
+    <Folder Include="Views\Villa\" />
   </ItemGroup>
 </Project>

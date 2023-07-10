@@ -32,6 +32,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/Views/Villa/CreateVilla.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlsbGEvQ3JlYXRlVmlsbGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/Views/Villa/IndexVilla.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlsbGEvSW5kZXhWaWxsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

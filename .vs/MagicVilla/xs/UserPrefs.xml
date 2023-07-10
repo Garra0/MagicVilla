@@ -1,17 +1,25 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_Web/Controllers/VillaController.cs">
-    <Files>
-      <File FileName="MagicVilla_Web/Controllers/VillaController.cs" Line="21" Column="36" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MagicVilla">
-            <Node name="MagicVilla_Web" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" selected="True" />
-              <Node name="Services" expanded="True" />
+            <Node name="MagicVilla_Web">
+              <Node name="models" expanded="True">
+                <Node name="Dto" expanded="True" />
+              </Node>
+              <Node name="Views">
+                <Node name="Shared" expanded="True" />
+                <Node name="Villa">
+                  <Node name="IndexVilla.cshtml" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -26,12 +34,7 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

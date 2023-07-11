@@ -6,18 +6,18 @@ using MagicVilla_Web.Services.IServices;
 
 namespace MagicVilla_Web.Services
 {
-    public class VillaService : BaseService, IVillaService
+    public class VillaNumberService : BaseService, IVillaNumberService
     {
         private readonly IHttpClientFactory _clientFactory;
         private string villaUrl;
-        public VillaService(IHttpClientFactory clientFactory, IConfiguration configuration) : base(clientFactory)
+        public VillaNumberService(IHttpClientFactory clientFactory, IConfiguration configuration) : base(clientFactory)
         {
             _clientFactory = clientFactory;
             // villaUrl = https://localhost:7001 from appsettings.json file
             villaUrl = configuration.GetValue<string>("ServiceUrls:VillaAPI");
         }
 
-        public Task<T> CreateAsync<T>(VillaCreateDTO dto)
+        public Task<T> CreateAsync<T>(VillaNumberCreateDTO dto)
         {
             return SendAsync<T>(new APIRequest()
             {
@@ -26,7 +26,7 @@ namespace MagicVilla_Web.Services
                 // Url = https://localhost:7001/api/villaAPI
                 // go to villaAPIController, you will see in the above -> Route["api/villaAPI"]
                 // then we need to add it to get access there.
-                Url = villaUrl + "/api/villaAPI"
+                Url = villaUrl + "/api/villaNumberAPI"
             });
         }
 
@@ -35,7 +35,7 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = villaUrl + "/api/villaAPI/"+id 
+                Url = villaUrl + "/api/villNumberaAPI/" + id 
             });
         }
 
@@ -44,7 +44,7 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = villaUrl + "/api/villaAPI" 
+                Url = villaUrl + "/api/villaNumberAPI"
             });
         }
 
@@ -53,17 +53,17 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = villaUrl + "/api/villaAPI/" + id
+                Url = villaUrl + "/api/villaNumberAPI/" + id
             }); 
         }
 
-        public Task<T> UpdateAsync<T>(VillaUpdateDTO dto)
+        public Task<T> UpdateAsync<T>(VillaNumberUpdateDTO dto)
         {
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = SD.ApiType.PUT,
                 Data = dto,
-                Url = villaUrl + "/api/villaAPI/"+dto.Id
+                Url = villaUrl + "/api/villaNumberAPI/" + dto.VillaNo
             });
         }
     }

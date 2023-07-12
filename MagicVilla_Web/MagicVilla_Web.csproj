@@ -23,11 +23,13 @@
     <None Remove="Services\IServices\" />
     <None Remove="Views\Villa\" />
     <None Remove="Views\VillaNumber\" />
+    <None Remove="models\VM\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Services\IServices\" />
     <Folder Include="Views\Villa\" />
     <Folder Include="Views\VillaNumber\" />
+    <Folder Include="models\VM\" />
   </ItemGroup>
 </Project>

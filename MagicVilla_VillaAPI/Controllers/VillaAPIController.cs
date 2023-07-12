@@ -16,7 +16,7 @@ namespace MagicVilla_VillaAPI.Controllers
     // if i add to url class route we will access the class
     // EX: https://localhost:7001/api/VillaAPI
     [Route("api/VillaAPI")] // or use [Route("api/[controller]")]
-    //[ApiController]
+    [ApiController]
     public class VillaAPIController : ControllerBase
     {
 
@@ -53,7 +53,7 @@ namespace MagicVilla_VillaAPI.Controllers
             return _response;
         }
 
-        [HttpGet("id", Name = "GetVilla")]
+        [HttpGet("{id:int}", Name = "GetVilla")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -160,8 +160,7 @@ namespace MagicVilla_VillaAPI.Controllers
             return _response;
         }
 
-
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:int}", Name = "UpdateVilla")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<APIResponse>> UpdateVilla(int id, [FromBody] VillaUpdateDTO UpdateDTO)
@@ -176,7 +175,6 @@ namespace MagicVilla_VillaAPI.Controllers
                 Villa model = _mapper.Map<Villa>(UpdateDTO);
 
                 await _dbVilla.UpdateAsync(model);
-
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;
                 return Ok(_response);

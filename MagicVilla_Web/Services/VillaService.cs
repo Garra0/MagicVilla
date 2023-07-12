@@ -8,6 +8,7 @@ namespace MagicVilla_Web.Services
 {
     public class VillaService : BaseService, IVillaService
     {
+
         private readonly IHttpClientFactory _clientFactory;
         private string villaUrl;
         public VillaService(IHttpClientFactory clientFactory, IConfiguration configuration) : base(clientFactory)

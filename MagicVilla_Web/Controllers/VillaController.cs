@@ -103,11 +103,11 @@ namespace MagicVilla_Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteVilla(VillaUpdateDTO model)
         {
-                var response = await _villaService.DeleteAsync<APIResponse>(model.Id);
-                if (response != null && response.IsSuccess)
-                {
-                    return RedirectToAction(nameof(IndexVilla));
-                }
+            var response = await _villaService.DeleteAsync<APIResponse>(model.Id);
+            if (response != null && response.IsSuccess)
+            {
+                return RedirectToAction(nameof(IndexVilla));
+            }
             return View(model);
         }
     }

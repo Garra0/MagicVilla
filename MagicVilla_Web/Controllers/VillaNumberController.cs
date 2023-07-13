@@ -91,48 +91,93 @@ namespace MagicVilla_Web.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> UpdateVillaNumber(int villaId)
+        public async Task<IActionResult> UpdateVillaNumber(int villaNo)
         {
-            var response = await _villaNumberService.GetAsync<APIResponse>(villaId);
+            VillaNumberUpdateVM villaNumberVM = new();
+            var response = await _villaNumberService.GetAsync<APIResponse>(villaNo);
             if (response != null && response.IsSuccess)
             {
                 VillaNumberDTO model = JsonConvert.DeserializeObject<VillaNumberDTO>(Convert.ToString(response.Result));
-                return View(_mapper.Map<VillaNumberUpdateDTO>(model));
+                villaNumberVM.VillaNumber = _mapper.Map<VillaNumberUpdateDTO>(model);
+            }
+            response = await _villaService.GetAllAsync<APIResponse>();
+            if (response != null && response.IsSuccess)
+            {
+                villaNumberVM.VillaList = JsonConvert.DeserializeObject<List<VillaDTO>>
+                    (Convert.ToString(response.Result)).Select(i => new SelectListItem
+                    {
+                        Text = i.Name,
+                        Value = i.Id.ToString()
+                    });
+                return View(villaNumberVM);
             }
             return NotFound();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateVillaNumber(VillaNumberUpdateDTO model)
+        public async Task<IActionResult> UpdateVillaNumber(VillaNumberUpdateVM model)
         {
             if (ModelState.IsValid)
             {
-                var response = await _villaNumberService.UpdateAsync<APIResponse>(model);
+                var response = await _villaNumberService.UpdateAsync<APIResponse>(model.VillaNumber);
                 if (response != null && response.IsSuccess)
                 {
                     return RedirectToAction(nameof(IndexVillaNumber));
                 }
+                else
+                {
+                    if (response.ErrorMessages.Count > 0)
+                    {
+                        // we choose 'errormessage' key name
+                        ModelState.AddModelError("ErrorMessage", response.ErrorMessages.FirstOrDefault());
+                    }
+                }
             }
+
+            var response2 = await _villaService.GetAllAsync<APIResponse>();
+            if (response2 != null && response2.IsSuccess)
+            {
+                model.VillaList = JsonConvert.DeserializeObject<List<VillaDTO>>
+                    (Convert.ToString(response2.Result)).Select(i => new SelectListItem
+                    {
+                        Text = i.Name,
+                        Value = i.Id.ToString()
+                    });
+            }
+
+            // its will return me to the same page with showing the error 'The Name field is required.'
             return View(model);
         }
 
-        public async Task<IActionResult> DeleteVillaNumber(int villaId)
+        public async Task<IActionResult> DeleteVillaNumber(int villaNo)
         {
-            var response = await _villaNumberService.GetAsync<APIResponse>(villaId);
+            VillaNumberDeleteVM villaNumberVM = new();
+            var response = await _villaNumberService.GetAsync<APIResponse>(villaNo);
             if (response != null && response.IsSuccess)
             {
                 VillaNumberDTO model = JsonConvert.DeserializeObject<VillaNumberDTO>(Convert.ToString(response.Result));
-                return View(model);
+                villaNumberVM.VillaNumber = model;
+            }
+            response = await _villaService.GetAllAsync<APIResponse>();
+            if (response != null && response.IsSuccess)
+            {
+                villaNumberVM.VillaList = JsonConvert.DeserializeObject<List<VillaDTO>>
+                    (Convert.ToString(response.Result)).Select(i => new SelectListItem
+                    {
+                        Text = i.Name,
+                        Value = i.Id.ToString()
+                    });
+                return View(villaNumberVM);
             }
             return NotFound();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteVillaNumber(VillaNumberUpdateDTO model)
+        public async Task<IActionResult> DeleteVillaNumber(VillaNumberDeleteVM model)
         {
-            var response = await _villaNumberService.DeleteAsync<APIResponse>(model.VillaNo);
+            var response = await _villaNumberService.DeleteAsync<APIResponse>(model.VillaNumber.VillaNo);
             if (response != null && response.IsSuccess)
             {
                 return RedirectToAction(nameof(IndexVillaNumber));

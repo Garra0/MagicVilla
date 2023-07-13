@@ -56,17 +56,18 @@ namespace MagicVilla_VillaAPI.Controllers
         [HttpGet("{id:int}", Name = "GetVillaNumber")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<APIResponse>> GetVillaNumber(int villaNo)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)] // i cant say (int villaNo) , i ((must)) write (int id):
+        public async Task<ActionResult<APIResponse>> GetVillaNumber(int id)
         {
             try
             {
-                if (villaNo == 0)
+                if (id == 0)
                 {
                     _response.StatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
-                var villaNumber = await _dbVillaNumber.GetAsync(u => u.VillaNo == villaNo);
+                // when i was use villaNo instead of 'id' that make error in actions!>.....
+                var villaNumber = await _dbVillaNumber.GetAsync(u => u.VillaNo == id);
                 if (villaNumber != null)
                 {
                     _response.Result = _mapper.Map<VillaNumberDTO>(villaNumber);
@@ -137,15 +138,15 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         // i deleted the 'I' from ActionResult
-        public async Task<ActionResult<APIResponse>> DeleteVillaNumber(int villNo)
+        public async Task<ActionResult<APIResponse>> DeleteVillaNumber(int id)
         {
             try
             {
-                if (villNo == 0)
+                if (id == 0)
                 {
                     return BadRequest();
                 }
-                var villaNumber = await _dbVillaNumber.GetAsync(u => u.VillaNo == villNo);
+                var villaNumber = await _dbVillaNumber.GetAsync(u => u.VillaNo == id);
                 if (villaNumber != null)
                 {
                     await _dbVillaNumber.RemoveAsync(villaNumber);
@@ -183,7 +184,6 @@ namespace MagicVilla_VillaAPI.Controllers
                 VillaNumber model = _mapper.Map<VillaNumber>(UpdateDTO);
 
                 await _dbVillaNumber.UpdateAsync(model);
-
                 _response.StatusCode = HttpStatusCode.NoContent;
                 _response.IsSuccess = true;
                 return Ok(_response);

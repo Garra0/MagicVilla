@@ -1,5 +1,22 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
   <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MagicVilla" expanded="True">
+            <Node name="MagicVilla_Web">
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -8,39 +25,8 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_Web/Views/VillaNumber/CreateVillaNumber.cshtml">
-    <Files>
-      <File FileName="MagicVilla_Web/Controllers/VillaNumberController.cs" Line="64" Column="100" />
-      <File FileName="MagicVilla_Web/Views/VillaNumber/CreateVilla.cshtml" Line="27" Column="66" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="MagicVilla">
-            <Node name="MagicVilla_Web">
-              <Node name="models" expanded="True">
-                <Node name="VM" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="VillaNumber" expanded="True">
-                  <Node name="CreateVillaNumber.cshtml" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

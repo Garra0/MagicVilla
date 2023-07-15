@@ -1,6 +1,5 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
@@ -10,20 +9,21 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Controllers/UsersController.cs">
     <Files>
-      <File FileName="MagicVilla_VillaAPI/Controllers/UsersController.cs" Line="43" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Controllers/UsersController.cs" Line="45" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MagicVilla">
-            <Node name="MagicVilla_VillaAPI">
+            <Node name="MagicVilla_VillaAPI" expanded="True">
               <Node name="Controllers" expanded="True">
                 <Node name="UsersController.cs" selected="True" />
               </Node>
-              <Node name="models" expanded="True" />
+              <Node name="models" expanded="True">
+                <Node name="Dto" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -33,6 +33,8 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <Debugger.DebugSourceFolders />
 </Properties>

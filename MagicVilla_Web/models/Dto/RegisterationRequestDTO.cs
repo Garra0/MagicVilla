@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MagicVilla_VillaAPI.models.Dto
+namespace MagicVilla_web.models.Dto
 {
 	public class RegisterationRequestDTO
 	{

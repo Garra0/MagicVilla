@@ -1,0 +1,34 @@
+﻿@model MagicVilla_web.models.Dto.LoginRequestDTO
+
+<form method="post">
+    @*container used to make space for the div and 'border p-4' make this properties*@
+    <div class="container border p-4">
+        <div class="row text-center">
+            <h1>Login</h1>
+        </div>
+
+        <div class="row text-center">
+            @*if there error (any error) tell me: *@
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                @*'placeholder' used to show message in the input file show 'Username...'*@
+                <input asp-for="UserName" type="text" placeholder="Username..." />
+            </div>
+            <div class="col-6 offset-3 pb-2">
+                @*of course i should use type="password" but not now...*@
+                <input asp-for="Password" type="text" placeholder="Password..." />
+            </div>
+            <div class="col-6 offset-3 pb-2">
+                <button type="submit" value="Submit">Login</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptspartial" />
+}

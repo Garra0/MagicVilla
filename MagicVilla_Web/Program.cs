@@ -1,6 +1,7 @@
 ﻿using MagicVilla_Web.Services;
 using MagicVilla_Web.Services.IServices;
 using MagicVilla_Wep;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -25,6 +26,15 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 //'AddDistributedMemoryCache': injection system, which allows you to register
 //and configure services that can be used throughout your application
 builder.Services.AddDistributedMemoryCache();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.HttpOnly = true;
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        options.LoginPath = "/Auth/Login";
+        options.AccessDeniedPath = "/Auth/AccessDenied";
+        options.SlidingExpiration = true;
+    });
 // reference to the above line
 builder.Services.AddSession(options =>
 {
@@ -48,7 +58,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseSession();
 app.MapControllerRoute(

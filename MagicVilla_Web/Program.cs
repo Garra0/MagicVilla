@@ -20,6 +20,17 @@ builder.Services.AddScoped<IVillaNumberService, VillaNumberService>();
 builder.Services.AddHttpClient<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
+//'AddDistributedMemoryCache': injection system, which allows you to register
+//and configure services that can be used throughout your application
+builder.Services.AddDistributedMemoryCache();
+// reference to the above line
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(100);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 // this line should be after 'builder.Services' lines ! , 90m to convert this problem ! XD
 var app = builder.Build();
 
@@ -37,7 +48,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseSession();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

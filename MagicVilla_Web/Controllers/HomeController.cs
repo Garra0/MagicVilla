@@ -6,6 +6,7 @@ using MagicVilla_Web.Services.IServices;
 using Newtonsoft.Json;
 using MagicVilla_Web.models.Dto;
 using MagicVilla_Web.models;
+using MagicVilla_Utility;
 
 namespace MagicVilla_Web.Controllers;
 
@@ -22,8 +23,9 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         List<VillaDTO> list = new();
-
-        var response = await _villaService.GetAllAsync<APIResponse>();
+        // "httpAcc.HttpContext.Session.GetString(SD.SessionToken)"
+        // the above line i copy it from laYout.cshtml line when i used if state and then paste it here...
+        var response = await _villaService.GetAllAsync<APIResponse>(HttpContext.Session.GetString(SD.SessionToken));
         if (response != null && response.IsSuccess)
         {
             list = JsonConvert.DeserializeObject<List<VillaDTO>>(Convert.ToString(response.Result));

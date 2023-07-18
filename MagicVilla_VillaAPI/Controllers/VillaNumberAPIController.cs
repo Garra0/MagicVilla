@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 namespace MagicVilla_VillaAPI.Controllers
 {
     //important:
-    [Route("api/VillaNumberAPI")] // or use [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/VillaNumberAPI")] // or use [Route("api/[controller]")]
     //[ApiController]
     // in program.cs file i have as defaulte version is (1.0) ,
     // but i can make other versions for me (example in mutliple versions)

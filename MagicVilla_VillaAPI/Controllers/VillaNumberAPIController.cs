@@ -17,7 +17,11 @@ namespace MagicVilla_VillaAPI.Controllers
     //important:
     [Route("api/VillaNumberAPI")] // or use [Route("api/[controller]")]
     //[ApiController]
+    // in program.cs file i have as defaulte version is (1.0) ,
+    // but i can make other versions for me (example in mutliple versions)
+    // then i will add here new line for the new version '[ApiVersion("2.0")]':
     [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
     public class VillaNumberAPIController : ControllerBase
     {
 
@@ -37,6 +41,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
 
         [HttpGet]
+        [MapToApiVersion("1.0")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillaNumbers()
         {
@@ -54,6 +59,13 @@ namespace MagicVilla_VillaAPI.Controllers
                     new List<string>() { ex.ToString() };
             }
             return _response;
+        }
+
+        [MapToApiVersion("2.0")]
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "olala1", "olala2" };
         }
 
         [HttpGet("{id:int}", Name = "GetVillaNumber")]

@@ -16,8 +16,9 @@ namespace MagicVilla_VillaAPI.Controllers
     // Route to use it in Urls , this project url is https://localhost:7001
     // if i add to url class route we will access the class
     // EX: https://localhost:7001/api/VillaAPI
-    [Route("api/VillaAPI")] // or use [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/VillaAPI")] // or use [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaAPIController : ControllerBase
     {
 

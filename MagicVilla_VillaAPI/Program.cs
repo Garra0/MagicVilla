@@ -32,10 +32,14 @@ builder.Services.AddApiVersioning(options =>
 {
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.DefaultApiVersion = new ApiVersion(1,0);
+    // to show in the header the versions that function is support...
+    options.ReportApiVersions = true;
 });
 builder.Services.AddVersionedApiExplorer(options =>
 {
     options.GroupNameFormat = "'v'VVV";
+    // its let us see just fun with version 1 , the next updates will fix that
+    options.SubstituteApiVersionInUrl = true;
 });
 
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");

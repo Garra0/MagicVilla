@@ -16,7 +16,7 @@ namespace MagicVilla_VillaAPI.Controllers
 {
     //important:
     [Route("api/v{version:apiVersion}/VillaNumberAPI")] // or use [Route("api/[controller]")]
-    //[ApiController]
+    [ApiController]
     // in program.cs file i have as defaulte version is (1.0) ,
     // but i can make other versions for me (example in mutliple versions)
     // then i will add here new line for the new version '[ApiVersion("2.0")]':

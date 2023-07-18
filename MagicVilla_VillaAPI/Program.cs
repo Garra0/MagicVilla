@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,16 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 // add this line because we make new villa number
 builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
-
+// if i add this line and didnot do any changes i will get message error in getvilla as wxample... :
+// 'An API version is required, but was not specified'
+// then i need make some updates to specified it.
+//builder.Services.AddApiVersioning(); // this give me error
+// then i should write the line like this :
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1,0);
+});
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
 
 builder.Services.AddAuthentication(x =>

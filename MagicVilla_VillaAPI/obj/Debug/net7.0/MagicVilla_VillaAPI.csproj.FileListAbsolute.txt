@@ -179,3 +179,5 @@
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/AutoMapper.dll
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_VillaAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

@@ -18,9 +18,10 @@ namespace MagicVilla_VillaAPI.v1.Controllers
     [Route("api/v{version:apiVersion}/VillaNumberAPI")] // or use [Route("api/[controller]")]
     [ApiController]
     // in program.cs file i have as defaulte version is (1.0) ,
-    // but i can make other versions for me (example in mutliple versions)
-    // then i will add here new line for the new version '[ApiVersion("2.0")]':
+    // but i can make other versions for me (example: in mutliple versions)
+    // then i will add here new line for the new version '[ApiVersion("2.0")]' ,'[ApiVersion("1.0")]':
     [ApiVersion("1.0")]
+    //[ApiVersion("1.0",Deprecated=true)] // Deprecated=true to show the depracated version
     public class VillaNumberAPIController : ControllerBase
     {
 
@@ -38,6 +39,13 @@ namespace MagicVilla_VillaAPI.v1.Controllers
             this._response = new();
         }
 
+        // if i didnot write 'GetString' i will get error
+        // because i will be have 2 (HttpGet) functions
+        [HttpGet("GetString")]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "olala1", "olala2" };
+        }
 
         [HttpGet]
         //[MapToApiVersion("1.0")]

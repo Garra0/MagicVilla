@@ -14,7 +14,8 @@ namespace MagicVilla_VillaAPI.Controllers
 {
     [Route("api/v{version:apiVersion}/UsersAuth")]
     [ApiController]
-    [ApiVersion("1.0")]
+    // that mean idc what is the version , this class will work with all versions
+    [ApiVersionNeutral]
     public class UsersController : Controller
     {
         private readonly IUserRepository _userRepo;

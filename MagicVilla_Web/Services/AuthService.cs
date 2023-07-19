@@ -24,7 +24,7 @@ namespace MagicVilla_Web.Services
             {
                 ApiType = SD.ApiType.POST,
                 Data = obj,
-                Url = villaUrl + "/api/UsersAuth/login"
+                Url = villaUrl + "/api/v1/UsersAuth/login" // i add 'v1' to use the version we need
             });
         }
 
@@ -34,7 +34,7 @@ namespace MagicVilla_Web.Services
             {
                 ApiType = SD.ApiType.POST,
                 Data = obj,
-                Url = villaUrl + "/api/UsersAuth/register"
+                Url = villaUrl + "/api/v1/UsersAuth/register"
             });
         }
     }

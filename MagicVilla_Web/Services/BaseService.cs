@@ -50,7 +50,7 @@ namespace MagicVilla_Web.Services
 
                 HttpResponseMessage apiResponse = null;
 
-                if(!string.IsNullOrEmpty(apiRequest.Token))
+                if (!string.IsNullOrEmpty(apiRequest.Token))
                 {
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.Token);
                 }
@@ -62,7 +62,9 @@ namespace MagicVilla_Web.Services
                 try
                 {
                     APIResponse ApiResponse = JsonConvert.DeserializeObject<APIResponse>(apiContent);
-                    if(apiResponse.StatusCode == HttpStatusCode.BadRequest || apiResponse.StatusCode == HttpStatusCode.NotFound)
+                    // i add 'ApiResponse != null' because we have new version now
+                    if (ApiResponse != null && (apiResponse.StatusCode == HttpStatusCode.BadRequest
+                        || apiResponse.StatusCode == HttpStatusCode.NotFound))
                     {
                         ApiResponse.StatusCode = HttpStatusCode.BadRequest;
                         ApiResponse.IsSuccess = false;
@@ -71,7 +73,7 @@ namespace MagicVilla_Web.Services
                         return returnobj;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     // if that happen and the type is not 'APIResponse' then its T...
                     var exceptionResponse = JsonConvert.DeserializeObject<T>(apiContent);

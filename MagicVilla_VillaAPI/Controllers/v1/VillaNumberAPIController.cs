@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MagicVilla_VillaAPI.Controllers
+namespace MagicVilla_VillaAPI.v1.Controllers
 {
     //important:
     [Route("api/v{version:apiVersion}/VillaNumberAPI")] // or use [Route("api/[controller]")]
@@ -21,7 +21,6 @@ namespace MagicVilla_VillaAPI.Controllers
     // but i can make other versions for me (example in mutliple versions)
     // then i will add here new line for the new version '[ApiVersion("2.0")]':
     [ApiVersion("1.0")]
-    [ApiVersion("2.0")]
     public class VillaNumberAPIController : ControllerBase
     {
 
@@ -41,7 +40,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
 
         [HttpGet]
-        [MapToApiVersion("1.0")]
+        //[MapToApiVersion("1.0")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillaNumbers()
         {
@@ -61,12 +60,6 @@ namespace MagicVilla_VillaAPI.Controllers
             return _response;
         }
 
-        [MapToApiVersion("2.0")]
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "olala1", "olala2" };
-        }
 
         [HttpGet("{id:int}", Name = "GetVillaNumber")]
         [ProducesResponseType(StatusCodes.Status200OK)]

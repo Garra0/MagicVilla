@@ -44,7 +44,7 @@ namespace MagicVilla_VillaAPI.Controllers
         // store data every 30s --> the goal : when i try call getVillas its will loading , but next 30s wont load because the info will be in the cache
         [ResponseCache(CacheProfileName = "Default30")]                 // in the input will shown message (FilterOccupancy) because i write it in the name.
         public async Task<ActionResult<APIResponse>> GetVillas([FromQuery(Name ="FilterOccupancy")]int? occupancy,
-            [FromQuery]string? search)
+            [FromQuery]string? search , int pageSize = 3, int pageNumber = 1)
         {
             //[FromQuery(Name ="FilterOccupancy")]int? occupancy
             // FromQuery the inbut in the box
@@ -58,11 +58,13 @@ namespace MagicVilla_VillaAPI.Controllers
                 // that mean show just the Occupancy have the number(x) , if number less than 1 then show all villas
                 if (occupancy > 0)
                 {
-                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy);
+                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy, pageSize:pageSize,
+                        pageNumber:pageNumber);
                 }
                 else
                 {
-                    villaList = await _dbVilla.GetAllAsync();
+                    villaList = await _dbVilla.GetAllAsync(pageSize: pageSize,
+                        pageNumber: pageNumber);
                 }
                 // search about villa have Occupancy=x and (Name="..." or Amenity="...").
                 if (!string.IsNullOrEmpty(search))

@@ -53,13 +53,24 @@ namespace MagicVilla_VillaAPI.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null,
+            int pageSize = 3, int pageNumber = 1)
         {
             IQueryable<T> query = dbSet;
 
             if (filter != null)
             {
                 query = query.Where(filter);
+            }
+            if (pageSize > 0)
+            {
+                //pageSize --> number of villas will shown
+                //pageNumber -->number of group , if pageSize=3 and we have 5 villas then we have 2 groups (3,2) / if pageSize=7 then pageNumber have 3 groups (3,3,1) , if i want see group who have just 1 villa i will give pageNumber=3
+                if (pageSize > 100)
+                {
+                    pageSize = 100; // number of records (villas) when we use 'getall'
+                }
+                query = query.Skip(pageSize * (pageNumber - 1)).Take(pageSize);
             }
             //Console.WriteLine(includeProperties);
             if (includeProperties != null)

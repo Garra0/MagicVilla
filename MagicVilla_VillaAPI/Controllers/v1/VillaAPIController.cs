@@ -41,6 +41,8 @@ namespace MagicVilla_VillaAPI.Controllers
         // when you try to access some thing and you havenot the role for it
         // like admin try deleteVilla , he cant and this return 403
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        // store data every 30s --> the goal : when i try call getVillas its will loading , but next 30s wont load because the info will be in the cache
+        [ResponseCache(Duration =30)]
         public async Task<ActionResult<APIResponse>> GetVillas()
         {
             try
@@ -65,6 +67,8 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        // the next line didnot change any thing... because there are 'NoStore'
+        [ResponseCache(Location =ResponseCacheLocation.None , NoStore =true)]
         public async Task<ActionResult<APIResponse>> GetVilla(int id)
         {
             try

@@ -45,7 +45,7 @@ namespace MagicVilla_VillaAPI.Controllers
         // store data every 30s --> the goal : when i try call getVillas its will loading , but next 30s wont load because the info will be in the cache
         [ResponseCache(CacheProfileName = "Default30")]                 // in the input will shown message (FilterOccupancy) because i write it in the name.
         public async Task<ActionResult<APIResponse>> GetVillas([FromQuery(Name ="FilterOccupancy")]int? occupancy,
-            [FromQuery]string? search , int pageSize = 3, int pageNumber = 1)
+            [FromQuery]string? search , int pageSize = 0, int pageNumber = 1)
         {
             //[FromQuery(Name ="FilterOccupancy")]int? occupancy
             // FromQuery the inbut in the box

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Text.Json;
 using AutoMapper;
 using MagicVilla_VillaAPI.Data;
 using MagicVilla_VillaAPI.models;
@@ -71,7 +72,10 @@ namespace MagicVilla_VillaAPI.Controllers
                 {
                     villaList = villaList.Where(u => u.Name.ToLower().Contains(search));
                 }
- 
+                // the next 2 lines to show the page info in the head:   head show:  x-pagination: {"PageNumber":1,"PageSize":3} 
+                Pagination pagination = new() { PageNumber = pageNumber, PageSize = pageSize };
+                Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(pagination));
+
                 _response.Result = _mapper.Map<List<VillaDTO>>(villaList);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);

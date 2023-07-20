@@ -42,12 +42,28 @@ namespace MagicVilla_VillaAPI.Controllers
         // like admin try deleteVilla , he cant and this return 403
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         // store data every 30s --> the goal : when i try call getVillas its will loading , but next 30s wont load because the info will be in the cache
-        [ResponseCache(CacheProfileName = "Default30")]
-        public async Task<ActionResult<APIResponse>> GetVillas()
+        [ResponseCache(CacheProfileName = "Default30")]                 // in the input will shown message (FilterOccupancy) because i write it in the name.
+        public async Task<ActionResult<APIResponse>> GetVillas([FromQuery(Name ="FilterOccupancy")]int? occupancy)
         {
+            //[FromQuery(Name ="FilterOccupancy")]int? occupancy
+            // FromQuery the inbut in the box
+            // the box name "FilterOccupancy"
+            // int? --> mean im waiting int number
+            // the number input name 'occupancy'
             try
             {
-                IEnumerable<Villa> villaList = await _dbVilla.GetAllAsync();
+                IEnumerable<Villa> villaList;
+
+                // that mean show just the Occupancy have the number(x) , if number less than 1 then show all villas
+                if (occupancy > 0)
+                {
+                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy);
+                }
+                else
+                {
+                    villaList = await _dbVilla.GetAllAsync();
+                }
+ 
                 _response.Result = _mapper.Map<List<VillaDTO>>(villaList);
                 _response.StatusCode = HttpStatusCode.OK;
                 return Ok(_response);

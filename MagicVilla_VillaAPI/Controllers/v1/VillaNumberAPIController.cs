@@ -80,6 +80,11 @@ namespace MagicVilla_VillaAPI.v1.Controllers
                 if (id == 0)
                 {
                     _response.StatusCode = HttpStatusCode.BadRequest;
+                    _response.IsSuccess = false;
+                    _response.ErrorMessages =
+                   new List<string>() { BadRequest().ToString() };
+                    //return _response;
+                    //_response.StatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
                 // when i was use villaNo instead of 'id' that make error in actions!>.....

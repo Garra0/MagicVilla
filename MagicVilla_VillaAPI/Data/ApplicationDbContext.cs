@@ -13,7 +13,7 @@ namespace MagicVilla_VillaAPI.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         // i dont need to call the next line because it's already an Identity entity inherited from 'IdentityUser' 
-        //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<LocalUser> LocalUsers { get; set; }
         public DbSet<Villa> Villas { get; set; }
         public DbSet<VillaNumber> villaNumbers { get; set; }

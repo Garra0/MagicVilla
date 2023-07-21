@@ -1,22 +1,26 @@
 ﻿using MagicVilla_VillaAPI.models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace MagicVilla_VillaAPI.Data
 {
     // i made the table from these atts and info
     // and i used the DB from here to add or delete villas from the list
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
+        public ApplicationDbContext() { }
 
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        // i dont need to call the next line because it's already an Identity entity inherited from 'IdentityUser' 
+        //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<LocalUser> LocalUsers { get; set; }
         public DbSet<Villa> Villas { get; set; }
         public DbSet<VillaNumber> villaNumbers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Villa>().HasData(
                 new Villa
                 {

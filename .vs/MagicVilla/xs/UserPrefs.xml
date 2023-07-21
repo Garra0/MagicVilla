@@ -1,27 +1,31 @@
-﻿<Properties StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Repository/IRepository/IRepository.cs">
+﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupConfiguration="{A80C04B4-8195-444A-8DD1-A5E9C34BA733}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Data/ApplicationDbContext.cs">
     <Files>
-      <File FileName="MagicVilla_VillaAPI/Repository/IRepository/IRepository.cs" Line="12" Column="48" />
+      <File FileName="MagicVilla_VillaAPI/Data/ApplicationDbContext.cs" Line="15" Column="102" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MagicVilla">
-            <Node name="MagicVilla_VillaAPI" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="v1" expanded="True" />
+            <Node name="MagicVilla_VillaAPI">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20230721120049_addIdentityUserTable.cs" selected="True" />
               </Node>
-              <Node name="Repository" expanded="True">
-                <Node name="IRepository" expanded="True" />
-              </Node>
+              <Node name="models" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -30,11 +34,6 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.MagicVilla__Utility PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

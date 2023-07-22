@@ -39,3 +39,8 @@
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.dll
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.pdb
 /Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/obj/Debug/net7.0/MagicVilla_Web.csproj.CopyComplete
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RRnu5Ll4c+cVgYGljMQRFeiSbV+87E+mNR7fyyguO37zLc9QwtSI5jt6AkD5aXQscQxtPJKl+owIe22/RMrC8A==",
+  "dgSpecHash": "N4Z4irmvnEfS4A/08CpOFqCWkzqMEoOq2zOmBM5ntuEu837XyvzK9gzDDktwzwb+SInnsfDfrr9ifEdheHW1Bw==",
   "success": true,
   "projectFilePath": "/Users/osama/Desktop/Projects/MagicVilla/MagicVilla_Web/MagicVilla_Web.csproj",
   "expectedPackageFiles": [
@@ -11,8 +11,15 @@
     "/Users/osama/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/Users/osama/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.identitymodel.abstractions/7.1.0-preview/microsoft.identitymodel.abstractions.7.1.0-preview.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.1.0-preview/microsoft.identitymodel.jsonwebtokens.7.1.0-preview.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.identitymodel.logging/7.1.0-preview/microsoft.identitymodel.logging.7.1.0-preview.nupkg.sha512",
+    "/Users/osama/.nuget/packages/microsoft.identitymodel.tokens/7.1.0-preview/microsoft.identitymodel.tokens.7.1.0-preview.nupkg.sha512",
     "/Users/osama/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/Users/osama/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/Users/osama/.nuget/packages/system.identitymodel.tokens.jwt/7.1.0-preview/system.identitymodel.tokens.jwt.7.1.0-preview.nupkg.sha512",
+    "/Users/osama/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/osama/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
+    "/Users/osama/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []
 }

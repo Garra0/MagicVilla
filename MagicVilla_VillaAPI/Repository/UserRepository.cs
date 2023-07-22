@@ -19,9 +19,11 @@ namespace MagicVilla_VillaAPI.Repository
         // we add this line for Login
         private string secretKey;
         private readonly IMapper _mapper;
+        private readonly RoleManager<IdentityRole> _roleManager;
         public UserRepository(ApplicationDbContext db,IConfiguration configuration,
-            UserManager<ApplicationUser> userManager, IMapper mapper)
+            UserManager<ApplicationUser> userManager, IMapper mapper, RoleManager<IdentityRole> roleManager)
 		{
+            _roleManager = roleManager;
             _mapper = mapper;
 			_db = db;
             _userManager = userManager;
@@ -98,6 +100,11 @@ namespace MagicVilla_VillaAPI.Repository
                 var result = await _userManager.CreateAsync(user, registerationRequestDTO.Password);
                 if (result.Succeeded)
                 {
+                    if (!_roleManager.RoleExistsAsync("admin").GetAwaiter().GetResult())
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole("admin"));
+                        await _roleManager.CreateAsync(new IdentityRole("customer"));
+                    }
                     await _userManager.AddToRoleAsync(user,"admin");
                     var userToReturn = _db.ApplicationUsers.FirstOrDefault(
                         u => u.UserName == registerationRequestDTO.UserName);
